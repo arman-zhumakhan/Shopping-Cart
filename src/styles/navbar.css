@@ -1,0 +1,30 @@
+.navbar {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    font-size: 20px;
+}
+
+.navbar-center {
+    display: flex;
+    justify-content:space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-right {
+    text-align: right;
+    margin-right: 50px;
+}
+a.logout {
+    font-weight: 700;
+    color: #e42727;
+    font-size: 25px;
+}
+
+.icon {
+    margin: 0 10px;
+}
