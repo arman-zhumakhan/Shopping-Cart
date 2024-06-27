@@ -1,9 +1,10 @@
+import "../styles/home.css";
 
 function Home() {
 
     return (
-        <>
-            <h1>Shopping Website</h1>
+        <div className="home">
+            <h1 className="title">Shopping Website</h1>
             <div>
                 <h3>Welcome to the Shopping Website</h3>
                 <p>
@@ -28,7 +29,7 @@ function Home() {
                     nibh lorem eget metus. Donec in aliquam tellus.
                 </p>
             </div>
-        </>
+        </div>
     );
 }
 

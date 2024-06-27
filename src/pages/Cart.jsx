@@ -1,21 +1,24 @@
 import { CartContext } from "../App";
 import { useContext } from "react";
+import CartItem from '../components/CartItem.jsx';
 
 
 const Cart = () => {
     const { cart } = useContext(CartContext);
+    const cartSize = cart.length;
+    const totalPrice = cart.reduce((acc, product) => acc + product.price, 0);
     return (
         <div>
-            <h2>Cart</h2>
-            <ul>
+            <div className="cartHeader">
+                <h2>Cart</h2>
+                <h3>Total: ${totalPrice}</h3>
+                <h4>Cart Size: {cartSize}</h4>
+            </div>
+            <div>
                 {cart.map((product) => {
-                    return <li key={product.id}>
-                        <img src={product.image} alt={product.title} width="150" />
-                        <h3>{product.title}</h3>
-                        <p>{product.price}</p>
-                    </li>
+                    return <CartItem key={product.id} product={product} />;
                 })}
-            </ul>
+            </div>
         </div>
     )
 }

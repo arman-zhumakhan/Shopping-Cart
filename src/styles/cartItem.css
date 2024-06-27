@@ -1,0 +1,19 @@
+.cartItem {
+    background-color: antiquewhite;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+.itemDes {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 2rem;
+}
+
+.cartImage {
+    height: 250px;
+}

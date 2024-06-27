@@ -9,7 +9,8 @@ import NavBar from "./components/NavBar";
 
 export const CartContext = createContext({
     cart: [],
-    addToCart: () => {}
+    addToCart: () => {},
+    removeFromCart: () => {},
 });
 
 
@@ -18,12 +19,15 @@ function App() {
     const addToCart = (product) => {
         setCart([...cart, product]);
     };
+    const removeFromCart = (product) => {
+        setCart(cart.filter((item) => item.id !== product.id));
+    }
 
     return (
-        <CartContext.Provider value={{ cart, addToCart }}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
             <NavBar />
             <Routes>
-                <Route index path="/" element={<Home />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/cart" element={<Cart />} />
             </Routes>
