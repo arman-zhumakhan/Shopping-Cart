@@ -9,10 +9,12 @@ const ProductCard = ({ product }) => {
 
     return (
         <div className="productItem">
-            <img className="productImage" src={product.image} alt={product.title}/>
-            <h3>{product.title}</h3>
-            <h4>{product.category}</h4>
-            <h5>${product.price}</h5>
+            <div className="itemDescription">
+                <img className="productImage" src={product.image} alt={product.title}/>
+                <h3>{product.title}</h3>
+                <h4>{product.category}</h4>
+                <h5>${product.price}</h5>
+            </div>
             <button onClick={() => addToCart(product)}>Add to Cart</button>
         </div>
     );

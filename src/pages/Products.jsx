@@ -24,7 +24,7 @@ const products = await fetchProducts();
 
 const Products = () => {
     return (
-        <div>
+        <div className="main">
             <h2>Products</h2>
             <div className="products">
                 {products.map((product) => {
